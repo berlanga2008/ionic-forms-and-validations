@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Routes, RouterModule, Router} from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class UserPage {
 
-  constructor() { }
+  constructor(
+      private router: Router
+  ) { }
 
+  onSubmit(values){
+    console.log(values);
+    this.router.navigate(["/form"]);
+  }
 }

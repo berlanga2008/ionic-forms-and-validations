@@ -6,6 +6,7 @@ import { UserPage } from '../pages/user/user';
 import { StatusBar} from "@ionic-native/status-bar";
 import { BrowserModule } from '@angular/platform-browser';
 import { ValidatorsModule } from '../validators/validators.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ValidatorsModule } from '../validators/validators.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ValidatorsModule
+    ValidatorsModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
