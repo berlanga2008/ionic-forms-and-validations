@@ -109,9 +109,9 @@ export class FormPage implements OnInit {
     console.log(values);
     let laUrl: string;
     laUrl = 'https://vivaelmusculo.com/login?create_account=1&id_customer=&firstname=' + values.name +
-    '&lastname=' + values.lastname + '&email=' + values.lastname + '&password= ' + values.matching_passwords.password +
+    '&lastname=' + values.lastname + '&email=' + values.email + '&password=' + values.matching_passwords.password +
     '&newsletter=1&customer_privacy=1&submitCreate=1';
-
+    this.validations_form.reset()
     this.http.get(laUrl).subscribe((response) => {
       console.log(response);
     });
